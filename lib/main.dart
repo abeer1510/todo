@@ -2,8 +2,10 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:todo/providers/my_provider.dart';
+import 'package:todo/screens/register_screen.dart';
 import 'package:todo/theme/dark_theme.dart';
 
+import 'screens/home_screen.dart';
 import 'screens/introduction_screen.dart';
 import 'screens/login_screen.dart';
 import 'screens/onbording_screen.dart';
@@ -47,6 +49,8 @@ class MyApp extends StatelessWidget {
         SplashScreen.routeName:(context)=>SplashScreen(),
         OnBoardingScreen.routeName:(context)=>OnBoardingScreen(),
         LoginScreen.routeName:(context)=>LoginScreen(),
+        RegisterScreen.routeName:(context)=>RegisterScreen(),
+        HomeScreen.routeName:(context)=>HomeScreen(),
       },
     );
   }
