@@ -14,11 +14,10 @@ class OnBoardingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var bodyStyle = GoogleFonts.inter(fontSize: 11.0,color: Theme.of(context).hintColor,fontWeight: FontWeight.w500);
+    var bodyStyle = GoogleFonts.inter(fontSize: 11.0,color: Theme.of(context).hintColor,fontWeight: FontWeight.w500,);
     var pageDecoration = PageDecoration(
-      titleTextStyle: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w700,color: Theme.of(context).primaryColor,),
+      titleTextStyle: TextStyle(fontSize: 20.0,fontWeight: FontWeight.w700,color: Theme.of(context).primaryColor,),
       bodyTextStyle: bodyStyle,
-      //pageColor: Theme.of(context).,
       imagePadding: EdgeInsets.zero,
       imageFlex: 2,
     );
@@ -77,7 +76,8 @@ class OnBoardingScreen extends StatelessWidget {
           body:'onboarding_body1'.tr(),
           image: _buildImage('onboarding1.png'),
           decoration: pageDecoration,
-          useScrollView: false
+          useScrollView: false,
+
         ),
         PageViewModel(
           title: "onboarding_title2".tr(),

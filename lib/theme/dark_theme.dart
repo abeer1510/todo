@@ -17,6 +17,7 @@ class DarkTheme extends BaseTheme{
 
   @override
   ThemeData get themeData => ThemeData(
+      cardColor: backgroundColor,
       focusColor: Color(0xff5669FF),
       hintColor: textColor,
       primaryColor: primaryColor,
@@ -25,11 +26,23 @@ class DarkTheme extends BaseTheme{
         centerTitle: true,
         backgroundColor: backgroundColor,
       ),
+      floatingActionButtonTheme: FloatingActionButtonThemeData(
+          backgroundColor: primaryColor,
+          shape: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(35),
+              borderSide: BorderSide(
+                color: Colors.white,
+                width: 4,
+              )
+          )
+      ),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         backgroundColor: backgroundColor,
         showSelectedLabels: true,
         showUnselectedLabels: true,
         selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.white,
+        type: BottomNavigationBarType.fixed,
       ),
       textTheme: TextTheme(
         titleSmall: GoogleFonts.inter(

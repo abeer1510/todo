@@ -17,6 +17,7 @@ class LightTheme extends BaseTheme{
 
   @override
   ThemeData get themeData => ThemeData(
+    cardColor: primaryColor,
     hintColor: Color(0xff7B7B7B),
     focusColor: Color(0xff7B7B7B),
     primaryColor: primaryColor,
@@ -25,11 +26,24 @@ class LightTheme extends BaseTheme{
       centerTitle: true,
       backgroundColor: backgroundColor,
     ),
+
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       backgroundColor: primaryColor,
       showSelectedLabels: true,
       showUnselectedLabels: true,
       selectedItemColor: Colors.white,
+      unselectedItemColor: Colors.white,
+      type: BottomNavigationBarType.fixed,
+    ),
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
+      backgroundColor: primaryColor,
+      shape: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(35),
+        borderSide: BorderSide(
+          color: Colors.white,
+          width: 4,
+        )
+      )
     ),
     textTheme: TextTheme(
       titleSmall: GoogleFonts.inter(
